@@ -1,6 +1,7 @@
 import Image from 'next/image';
 import { notFound } from 'next/navigation';
 import { getProductById } from '@/lib/services/product-services';
+import AddToCartButton from './add-to-cart-button';
 
 export default async function ProductDetailsContent({ params }) {
 
@@ -38,9 +39,7 @@ export default async function ProductDetailsContent({ params }) {
                     {product.description || "A premium addition to your collection. High-quality materials and perfect fit."}
                 </p>
 
-                <button className="bg-black text-white px-8 py-4 rounded-lg hover:bg-gray-800 transition-colors font-semibold text-lg w-full md:w-64">
-                    Buy Now
-                </button>
+                <AddToCartButton product={product} />
             </div>
         </>
     );
