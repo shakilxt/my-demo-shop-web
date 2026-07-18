@@ -1,9 +1,11 @@
-import { Geist, Geist_Mono } from "next/font/google";
+import { Plus_Jakarta_Sans } from "next/font/google";
 import "./globals.css";
 import CartHydration from "@/components/storefront/cart/cart-hydration";
+import SiteHeader from "@/components/layout/header/site-header";
+import FooterSection from "@/components/layout/footer/footer-section";
 
-const geistSans = Geist({ variable: "--font-geist-sans", subsets: ["latin"] });
-const geistMono = Geist_Mono({ variable: "--font-geist-mono", subsets: ["latin"] });
+const plusJakartaSans = Plus_Jakarta_Sans({ variable: "--font-sans", subsets: ["latin"] });
+const geistMono = Plus_Jakarta_Sans({ variable: "--font-mono", subsets: ["latin"] });
 
 export const metadata = {
     title: "DEMO SHOP",
@@ -12,13 +14,17 @@ export const metadata = {
 
 export default function RootLayout({ children }) {
     return (
-        <html lang="en" className={`${geistSans.variable} ${geistMono.variable} h-full antialiased`}>
+        <html lang="en" className={`${plusJakartaSans.variable} ${geistMono.variable} h-full antialiased`}>
 
             <body suppressHydrationWarning className="bg-stone-50 min-h-full flex flex-col">
 
                 <CartHydration />
 
+                <SiteHeader />
+                
                 {children}
+
+                <FooterSection />
 
             </body>
 
