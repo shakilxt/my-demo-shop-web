@@ -11,10 +11,7 @@ export default function CartPage() {
 
     if (items.length === 0) {
         return (
-            <main className="max-w-6xl mx-auto p-8 bg-stone-50">
-                <h1 className="text-3xl font-bold text-stone-900 mb-8">Your Cart</h1>
-                <EmptyCart />
-            </main>
+            <EmptyCart />
         );
     }
 
