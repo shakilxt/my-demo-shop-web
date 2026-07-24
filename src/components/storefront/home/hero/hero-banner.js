@@ -4,7 +4,7 @@ import { useState, useEffect, useCallback } from 'react';
 import Link from 'next/link';
 import Image from 'next/image';
 import useEmblaCarousel from 'embla-carousel-react';
-import { SLIDES } from './slides';
+import { SLIDES } from '../../../../lib/data/slides';
 import Autoplay from 'embla-carousel-autoplay';
 
 export default function HeroBanner() {

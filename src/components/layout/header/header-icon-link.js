@@ -7,7 +7,7 @@ export default function HeaderIconLink({ href, icon: Icon, label, badge }) {
             className="relative flex flex-col items-center gap-1.5 text-gray-900 group"
         >
 
-            <Icon size={20} strokeWidth={1.5} />
+            <Icon stroke={1.5} className="size-5.5" />
 
             <span className="text-xs group-hover:underline group-hover:underline-offset-1">{label}</span>
 

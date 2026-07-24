@@ -1,16 +1,14 @@
 
-export default function FooterTopContent({ children, title, description }) {
+export default function FooterTopContent({ icon: Icon, title, description }) {
 
     return (
-        <div className="flex flex-col items-start gap-1">
+        <div className="flex flex-col items-start gap-2">
 
-            <div className="w-10 h-10 flex items-center justify-center rounded-full text-orange-600">
-                {children}
-            </div>
+            <Icon stroke={1} className="size-8 text-orange-600" />
 
-            <h3 className="text-gray-900 font-bold mb-4">{title}</h3>
+            <h3 className="text-gray-900 font-extrabold mb-2">{title}</h3>
 
-            <p className="text-sm text-gray-600">{description}</p>
+            <p className="text-sm text-gray-500">{description}</p>
 
         </div>
     )

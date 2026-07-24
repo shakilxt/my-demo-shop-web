@@ -1,29 +1,45 @@
 import { Suspense } from 'react';
 import { ProductGrid } from '@/components/storefront/home/product-grid';
 import HeroSection from '@/components/storefront/home/hero/hero-section';
-import FooterSection from '@/components/layout/footer/footer-section';
+import { H2 } from '@/components/storefront/ui/heading';
+import CategoryGrid from '@/components/storefront/ui/category/category-grid';
+import MoreButton from '@/components/storefront/ui/more-button';
 
 export default async function HomePage() {
 
+
     return (
 
-        <div className='bg-white min-h-screen'>
+        <main className="max-w-350 mx-auto pb-24 px-6">
 
             <HeroSection />
 
-            <main className="max-w-350 mx-auto py-24">
+            <div className='mb-20'>
 
-                <h1 className="text-3xl font-bold mb-8 ms-6 text-gray-900">Latest Arrivals</h1>
+                <div className='flex items-center justify-between mb-8'>
+
+                    <H2 className="text-orange-600">Flash Sale</H2>
+
+                    <MoreButton text='More' link="/flash-sale" />
+
+                </div>
 
                 <Suspense>
-                    <div className='px-6'>
-                        <ProductGrid />
-                    </div>
+                    <ProductGrid />
                 </Suspense>
 
+            </div>
 
-            </main>
+            <div className='mb-20'>
 
-        </div>
+                <H2>Shop by Categories</H2>
+
+                <CategoryGrid />
+
+            </div>
+
+
+        </main>
+
     );
 }

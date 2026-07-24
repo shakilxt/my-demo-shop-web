@@ -1,6 +1,17 @@
 import {
-    Sprout, Shirt, Sparkles, Cpu, Zap, Tv, Sofa, Gift, Home, PawPrint,
-} from 'lucide-react';
+    IconCategory,
+    IconPlant,
+    IconShirt,
+    IconPerfume,
+    IconFridge,
+    IconLamp,
+    IconDeviceTvOld,
+    IconArmchair,
+    IconGift,
+    IconHome,
+    IconPaw
+
+} from '@tabler/icons-react';
 
 const RICH_MEGA_MENUS = {
     'beauty-personal-care': [
@@ -24,16 +35,17 @@ const RICH_MEGA_MENUS = {
 };
 
 export const CATEGORIES = [
-    { slug: 'agriculture', name: 'Agriculture', icon: Sprout, href: '/categories/agriculture' },
-    { slug: 'apparel', name: 'Apparel', icon: Shirt, href: '/categories/apparel' },
-    { slug: 'beauty-personal-care', name: 'Beauty & Personal Care', icon: Sparkles, href: '/categories/beauty-personal-care' },
-    { slug: 'consumer-electronics', name: 'Consumer Electronics', icon: Cpu, href: '/categories/consumer-electronics' },
-    { slug: 'electrical-equipment', name: 'Electrical Equipment', icon: Zap, href: '/categories/electrical-equipment' },
-    { slug: 'electronics', name: 'Electronics', icon: Tv, href: '/categories/electronics' },
-    { slug: 'furniture', name: 'Furniture', icon: Sofa, href: '/categories/furniture' },
-    { slug: 'handicrafts-gifts', name: 'Handicrafts & Gifts', icon: Gift, href: '/categories/handicrafts-gifts' },
-    { slug: 'home-applications', name: 'Home Applications', icon: Home, href: '/categories/home-applications' },
-    { slug: 'pet-accessories-foods', name: 'Pet Accessories & Pet Foods', icon: PawPrint, href: '/categories/pet-accessories-foods' },
+    { slug: 'categories', name: '', icon: IconCategory, href: '' },
+    { slug: 'agriculture', name: 'Agriculture', icon: IconPlant, href: '/categories/agriculture' },
+    { slug: 'apparel', name: 'Apparel', icon: IconShirt, href: '/categories/apparel' },
+    { slug: 'beauty-personal-care', name: 'Beauty & Personal Care', icon: IconPerfume, href: '/categories/beauty-personal-care' },
+    { slug: 'consumer-electronics', name: 'Consumer Electronics', icon: IconFridge, href: '/categories/consumer-electronics' },
+    { slug: 'electrical-equipment', name: 'Electrical Equipment', icon: IconLamp, href: '/categories/electrical-equipment' },
+    { slug: 'electronics', name: 'Electronics', icon: IconDeviceTvOld, href: '/categories/electronics' },
+    { slug: 'furniture', name: 'Furniture', icon: IconArmchair, href: '/categories/furniture' },
+    { slug: 'handicrafts-gifts', name: 'Handicrafts & Gifts', icon: IconGift, href: '/categories/handicrafts-gifts' },
+    { slug: 'home-applications', name: 'Home Applications', icon: IconHome, href: '/categories/home-applications' },
+    { slug: 'pet-accessories-foods', name: 'Pet Accessories & Pet Foods', icon: IconPaw, href: '/categories/pet-accessories-foods' },
 ];
 
 export function getMegaMenu(category) {

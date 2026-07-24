@@ -2,7 +2,7 @@
 
 import { useRef, useState } from 'react';
 import { AnimatePresence, motion } from 'motion/react';
-import CategorySidebar from './category-sidebar';
+import CategorySidebar from './category/category-sidebar';
 import CategoryMegaMenu from './category-mega-menu';
 import HeroBanner from './hero-banner';
 import FeatureBadges from './feature-badges';
@@ -15,6 +15,11 @@ export default function HeroSection() {
     const closeTimeout = useRef(null);
 
     function handleHover(category) {
+        if (category.slug === 'categories') {
+            setActiveCategory(null);
+            return;
+        }
+        
         if (closeTimeout.current) {
             clearTimeout(closeTimeout.current);
             closeTimeout.current = null;
@@ -27,7 +32,8 @@ export default function HeroSection() {
     }
 
     return (
-        <section className="max-w-350 mx-auto px-6 py-6">
+        <section className="mb-6">
+            
             <div className="relative flex gap-7.5" onMouseLeave={scheduleClose}>
 
                 <CategorySidebar activeCategory={activeCategory} onHoverCategory={handleHover} />
@@ -45,7 +51,7 @@ export default function HeroSection() {
                             exit={{ opacity: 0, x: -8 }}
                             transition={{ duration: 0.15 }}
                             onMouseEnter={() => handleHover(activeCategory)}
-                            className="absolute z-40 bg-white border border-stone-200 p-8 overflow-y-auto"
+                            className="absolute z-40 bg-white border border-gray-200 p-12 overflow-y-auto"
                             style={{
                                 top: 0,
                                 bottom: 0,

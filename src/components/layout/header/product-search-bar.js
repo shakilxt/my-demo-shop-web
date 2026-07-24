@@ -22,7 +22,7 @@ export default function ProductSearchBar() {
                 aria-label="Search"
                 className="w-12 h-12 flex items-center justify-center text-gray-900 shrink-0 cursor-pointer hover:bg-gray-200 rounded-full transition-colors"
             >
-                <Search size={24} />
+                <Search size={24} strokeWidth={1.5} />
             </button>
         </form>
     );

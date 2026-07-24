@@ -1,10 +1,10 @@
-import { Headset, RotateCcw, ShieldCheck, Truck } from 'lucide-react';
+import { IconHeadset, IconRotateClockwise, IconShieldCheck, IconTruckDelivery } from '@tabler/icons-react';
 
 const FEATURES = [
-    { icon: Truck, title: 'Free Shipping', description: 'On all orders over $50' },
-    { icon: ShieldCheck, title: 'Secure Payment', description: '100% secure payment' },
-    { icon: RotateCcw, title: 'Easy Return', description: '30 days return policy' },
-    { icon: Headset, title: '24/7 Support', description: 'Dedicated support' },
+    { icon: IconTruckDelivery, title: 'Free Shipping', description: 'On all orders over $50' },
+    { icon: IconShieldCheck, title: 'Secure Payment', description: '100% secure payment' },
+    { icon: IconRotateClockwise, title: 'Easy Return', description: '30 days return policy' },
+    { icon: IconHeadset, title: '24/7 Support', description: 'Dedicated support' },
 ];
 
 export default function FeatureBadges() {

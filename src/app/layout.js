@@ -5,7 +5,6 @@ import SiteHeader from "@/components/layout/header/site-header";
 import FooterSection from "@/components/layout/footer/footer-section";
 
 const plusJakartaSans = Plus_Jakarta_Sans({ variable: "--font-sans", subsets: ["latin"] });
-const geistMono = Plus_Jakarta_Sans({ variable: "--font-mono", subsets: ["latin"] });
 
 export const metadata = {
     title: "DEMO SHOP",
@@ -14,17 +13,21 @@ export const metadata = {
 
 export default function RootLayout({ children }) {
     return (
-        <html lang="en" className={`${plusJakartaSans.variable} ${geistMono.variable} h-full antialiased`}>
+        <html lang="en" className={`${plusJakartaSans.variable} min-h-full antialiased`}>
 
-            <body suppressHydrationWarning className="bg-stone-50 min-h-full flex flex-col">
+            <body suppressHydrationWarning className="h-full flex">
 
-                <CartHydration />
+                <div className="flex flex-col flex-1 bg-white">
 
-                <SiteHeader />
-                
-                {children}
+                    <CartHydration />
 
-                <FooterSection />
+                    <SiteHeader />
+
+                    {children}
+
+                    <FooterSection />
+
+                </div>
 
             </body>
 
